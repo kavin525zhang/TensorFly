@@ -9,7 +9,7 @@ with open(file_path) as f:
 pattern = "^\d*\[\d+\]"
 text = re.sub(pattern, "", text)
 
-openai.api_key = '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'
+openai.api_key = ''
 prompt = "{}\n\n提取5个词组或者短语作为关键词并且以带序号的列表格式输出: \n".format(text)
 print(prompt)
 completion = openai.ChatCompletion.create(
